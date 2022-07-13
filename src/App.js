@@ -5,6 +5,7 @@ import { Anagram } from './components/anagram'
 import { Rotation } from './components/rotation'
 import { Reverse } from './components/reverse'
 import { Letters } from './components/letters'
+import { RandomText } from './components/randomText'
 
 export const App = () => {
   return (
@@ -14,6 +15,7 @@ export const App = () => {
       <Rotation />
       <Reverse />
       <Letters />
+      <RandomText />
     </div>
   )
 }
