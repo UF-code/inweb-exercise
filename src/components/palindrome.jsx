@@ -23,8 +23,7 @@ export const Palindrome = () => {
       <Button
         className=''
         onClick={() => {
-          console.log(palindrome)
-          console.log(isPalindrome(palindrome))
+          isPalindrome(palindrome)
         }}
         outline={true}
         gradientDuoTone='cyanToBlue'
