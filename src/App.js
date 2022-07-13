@@ -6,6 +6,7 @@ import { Rotation } from './components/rotation'
 import { Reverse } from './components/reverse'
 import { Letters } from './components/letters'
 import { RandomText } from './components/randomText'
+import { TitleCase } from './components/titleCase'
 
 export const App = () => {
   return (
@@ -16,6 +17,7 @@ export const App = () => {
       <Reverse />
       <Letters />
       <RandomText />
+      <TitleCase />
     </div>
   )
 }
