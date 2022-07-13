@@ -10,7 +10,7 @@ import { TitleCase } from './components/titleCase'
 
 export const App = () => {
   return (
-    <div className='bg-slate-800 h-screen'>
+    <div className='bg-slate-800 h-screen  '>
       <Palindrome />
       <Anagram />
       <Rotation />
