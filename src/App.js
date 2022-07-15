@@ -15,7 +15,6 @@ export const App = () => {
     <Router>
       <div className='bg-slate-800 h-screen '>
         <nav className='flex justify-center'>
-          {/* <Link className='text-white m-5 underline focus:underline-offset-4' to='/'> */}
           <Link className='text-white m-5  focus:text-red-500 focus:underline' to='/'>
             Palindrome
           </Link>

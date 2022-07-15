@@ -12,7 +12,25 @@ export const Anagram = () => {
   const handleText2Change = (e) => setText2(e.target.value)
 
   const checkIsAnagram = (txt1, txt2) => {
-    setIsAnagram(txt1.split('').sort().join('') === txt2.split('').sort().join(''))
+    txt1 = txt1.replace(/[^\w]/g, '').toLowerCase()
+    txt2 = txt2.replace(/[^\w]/g, '').toLowerCase()
+
+    if (txt1.length !== txt2.length) {
+      return false
+    }
+
+    let arrB = txt2.split('')
+
+    for (let char of txt1) {
+      if (!arrB.includes(char)) {
+        return false
+        break
+      } else {
+        arrB.splice(arrB.indexOf(char), 1)
+      }
+    }
+
+    return true
   }
 
   return (
@@ -21,7 +39,7 @@ export const Anagram = () => {
       <Button
         className=''
         onClick={() => {
-          checkIsAnagram(text1, text2)
+          setIsAnagram(checkIsAnagram(text1, text2))
         }}
         outline={true}
         gradientDuoTone='cyanToBlue'
