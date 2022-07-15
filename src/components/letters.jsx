@@ -24,7 +24,7 @@ export const Letters = () => {
   }
 
   return (
-    <div className='flex justify-center pt-10'>
+    <div className='flex justify-center items-center h-5/6'>
       {/*  */}
       <Button
         className=''
