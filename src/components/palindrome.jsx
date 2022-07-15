@@ -10,11 +10,15 @@ export const Palindrome = () => {
   const handleTextChange = (e) => setPalindrome(e.target.value)
 
   const isPalindrome = (txt) => {
-    var re = /[\W_]/g
-    var lowRegStr = txt.toLowerCase().replace(re, '')
-    var reverseStr = lowRegStr.split('').reverse().join('')
-
-    setIsPalindrome(reverseStr === lowRegStr)
+    var re = /[^A-Za-z0-9]/g
+    txt = txt.toLowerCase().replace(re, '')
+    var len = txt.length
+    for (var i = 0; i < len / 2; i++) {
+      if (txt[i] !== txt[len - 1 - i]) {
+        return false
+      }
+    }
+    return true
   }
 
   return (
@@ -23,7 +27,7 @@ export const Palindrome = () => {
       <Button
         className=''
         onClick={() => {
-          isPalindrome(palindrome)
+          setIsPalindrome(isPalindrome(palindrome))
         }}
         outline={true}
         gradientDuoTone='cyanToBlue'
